@@ -99,12 +99,12 @@
         songstats: false,
         commandLiteral: "!",
         blacklists: {
-            NSFW: "https://github.com/edmcbot/custombot/blob/master/blacklists/NSFWlist.json",
-            OP: "https://github.com/edmcbot/custombot/blob/master/blacklists/OPlist.json"
+            NSFW: "https://raw.githubusercontent.com/edmcbot/custombot/master/blacklists/NSFWlist.json",
+            OP: "https://raw.githubusercontent.com/edmcbot/custombot/master/blacklists/OPlist.json"
         }
     }));
 
     //Start the bot and extend it when it has loaded.
-    $.getScript('https://github.com/edmcbot/bot/blob/master/basicBot.js', extend);
+    $.getScript('https://raw.githubusercontent.com/edmcbot/bot/master/basicBot.js', extend);
 
 }).call(this);
