@@ -53,24 +53,24 @@
     //Change the bots default settings and make sure they are loaded on launch
 
     localStorage.setItem("basicBotsettings", JSON.stringify({
-        botName: "basicBot",
+        botName: "EDMC",
         language: "english",
         chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
         maximumAfk: 120,
-        afkRemoval: true,
+        afkRemoval: false,
         maximumDc: 60,
         bouncerPlus: true,
         lockdownEnabled: false,
-        lockGuard: false,
+        lockGuard: true,
         maximumLocktime: 10,
-        cycleGuard: true,
+        cycleGuard: false,
         maximumCycletime: 10,
         timeGuard: true,
-        maximumSongLength: 10,
-        autodisable: true,
+        maximumSongLength: 8,
+        autodisable: false,
         commandCooldown: 30,
         usercommandsEnabled: true,
-        lockskipPosition: 3,
+        lockskipPosition: 1,
         lockskipReasons: [
             ["theme", "This song does not fit the room theme. "],
             ["op", "This song is on the OP list. "],
@@ -82,29 +82,29 @@
         ],
         afkpositionCheck: 15,
         afkRankCheck: "ambassador",
-        motdEnabled: false,
-        motdInterval: 5,
-        motd: "Temporary Message of the Day",
+        motdEnabled: true,
+        motdInterval: 30,
+        motd: ":warning: Please read our rules (http://bit.ly/EDMCRULES) and don't play songs in the OP list, or you can be skipped !(http://bit.ly/EDMCOP) :warning: :exclamation: Vote for our next themed sunday http://bit.ly/EDMCsunday :exclamation:",
         filterChat: true,
-        etaRestriction: false,
-        welcome: true,
-        opLink: null,
-        rulesLink: null,
+        etaRestriction: true,
+        welcome: false,
+        opLink: "http://bit.ly/EDMCOP",
+        rulesLink: "http://bit.ly/EDMCRULES",
         themeLink: null,
-        fbLink: null,
-        youtubeLink: null,
+        fbLink: "http://bit.ly/EDMCommunity",
+        youtubeLink: "http://bit.ly/RomsKidd",
         website: null,
         intervalMessages: [],
         messageInterval: 5,
-        songstats: true,
+        songstats: false,
         commandLiteral: "!",
         blacklists: {
-            NSFW: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
-            OP: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/ExampleOPlist.json"
+            NSFW: "https://github.com/edmcbot/custombot/blob/master/blacklists/NSFWlist.json",
+            OP: "https://github.com/edmcbot/custombot/blob/master/blacklists/OPlist.json"
         }
     }));
 
     //Start the bot and extend it when it has loaded.
-    $.getScript('https://rawgit.com/Yemasthui/basicBot/master/basicBot.js', extend);
+    $.getScript('https://github.com/edmcbot/bot/blob/master/basicBot.js', extend);
 
 }).call(this);
